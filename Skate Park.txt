@@ -1,0 +1,27 @@
+--
+print("Made By Lagx#2413")
+local UnOwnedPrintersOnly = true -- Set to false to get printers that have an owner.
+--
+
+local Chil = workspace.MoneyPrinters:GetDescendants()
+for i,v in pairs(Chil) do
+if v and v.ClassName == "StringValue" and v.Name == "Int2" then
+v.Parent:Destroy()
+end
+end
+
+
+local PP = workspace.MoneyPrinters:GetDescendants()
+for i,v in pairs(PP) do
+if UnOwnedPrintersOnly == true then 
+if v and v.ClassName == "Part" and v.Parent.Int.Money.Value ~= 0 and v.Parent.TrueOwner.Value == nil then
+print("Teleporting to an unowned printer!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+end
+else
+if v and v.ClassName == "Part" and v.Parent.Int.Money.Value ~= 0 and v.Parent.TrueOwner.Value ~= nil then
+print("Teleporting to an owned printer!")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+end
+end
+end

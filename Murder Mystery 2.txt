@@ -1,0 +1,490 @@
+--[Made by Bubbles]--
+--If you're going to take, please leave a vouch--
+--Don't be a leech, I worked pretty hard on it :(
+
+-- Objects
+
+local MM2 = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Piplup = Instance.new("ImageLabel")
+local MadeByMe = Instance.new("TextLabel")
+local isOn2 = Instance.new("TextLabel")
+local mCheck = Instance.new("TextLabel")
+local mSum = Instance.new("TextLabel")
+local sCheck = Instance.new("TextLabel")
+local sSum = Instance.new("TextLabel")
+local Hide = Instance.new("TextButton")
+local Shift = Instance.new("TextLabel")
+local Coin = Instance.new("TextLabel")
+local isOn1 = Instance.new("TextLabel")
+local KeyBind = Instance.new("TextLabel")
+local isOn3 = Instance.new("TextLabel")
+local isOn4 = Instance.new("TextLabel")
+local God = Instance.new("TextLabel")
+local Show = Instance.new("TextButton")
+
+-- Properties
+
+MM2.Name = "MM2"
+MM2.Parent = game.CoreGui
+MM2.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = MM2
+Main.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Main.BorderColor3 = Color3.new(0, 0.607843, 1)
+Main.BorderSizePixel = 5
+Main.Draggable = true
+Main.Position = UDim2.new(0.574999988, 0, 0.349999994, 0)
+Main.Size = UDim2.new(0.300000012, 0, 0.550000012, 0)
+Main.Visible = false
+
+Piplup.Name = "Piplup"
+Piplup.Parent = Main
+Piplup.BackgroundColor3 = Color3.new(1, 1, 1)
+Piplup.BorderColor3 = Color3.new(0.129412, 0.54902, 1)
+Piplup.BorderSizePixel = 5
+Piplup.Draggable = true
+Piplup.Position = UDim2.new(0.600000024, 0, 0, 0)
+Piplup.Size = UDim2.new(0.400000006, 0, 0.200000003, 0)
+Piplup.ZIndex = 2
+Piplup.Image = "rbxassetid://885684262"
+
+MadeByMe.Name = "MadeByMe"
+MadeByMe.Parent = Main
+MadeByMe.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+MadeByMe.BorderColor3 = Color3.new(0, 0.607843, 1)
+MadeByMe.BorderSizePixel = 5
+MadeByMe.Draggable = true
+MadeByMe.Size = UDim2.new(0.600000024, 0, 0.200000003, 0)
+MadeByMe.ZIndex = 3
+MadeByMe.Font = Enum.Font.SciFi
+MadeByMe.FontSize = Enum.FontSize.Size24
+MadeByMe.Text = "Made by Bubbles"
+MadeByMe.TextColor3 = Color3.new(0, 0.607843, 1)
+MadeByMe.TextScaled = true
+MadeByMe.TextSize = 20
+MadeByMe.TextStrokeColor3 = Color3.new(0.129412, 0.54902, 1)
+MadeByMe.TextWrapped = true
+
+isOn2.Name = "isOn2"
+isOn2.Parent = Main
+isOn2.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+isOn2.BorderColor3 = Color3.new(0, 0.607843, 1)
+isOn2.BorderSizePixel = 5
+isOn2.Position = UDim2.new(0.714999974, 0, 0.600000024, 0)
+isOn2.Size = UDim2.new(0.280000001, 0, 0.0850000009, 0)
+isOn2.ZIndex = 5
+isOn2.Font = Enum.Font.SciFi
+isOn2.FontSize = Enum.FontSize.Size18
+isOn2.Text = "Inactive"
+isOn2.TextColor3 = Color3.new(1, 0, 1)
+isOn2.TextSize = 18
+isOn2.TextStrokeColor3 = Color3.new(1, 0, 1)
+isOn2.TextStrokeTransparency = 0.69999998807907
+isOn2.TextWrapped = true
+
+mCheck.Name = "mCheck"
+mCheck.Parent = Main
+mCheck.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+mCheck.BorderColor3 = Color3.new(0, 0.607843, 1)
+mCheck.BorderSizePixel = 5
+mCheck.Position = UDim2.new(0, 0, 0.36500001, 0)
+mCheck.Size = UDim2.new(0.5, 0, 0.100000001, 0)
+mCheck.ZIndex = 4
+mCheck.Font = Enum.Font.SciFi
+mCheck.FontSize = Enum.FontSize.Size24
+mCheck.Text = "Murderer [F]"
+mCheck.TextColor3 = Color3.new(1, 0, 0)
+mCheck.TextSize = 20
+mCheck.TextWrapped = true
+
+mSum.Name = "mSum"
+mSum.Parent = Main
+mSum.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+mSum.BorderColor3 = Color3.new(0, 0.607843, 1)
+mSum.BorderSizePixel = 5
+mSum.Position = UDim2.new(0, 0, 0.485000014, 0)
+mSum.Size = UDim2.new(0.5, 0, 0.100000001, 0)
+mSum.ZIndex = 4
+mSum.Font = Enum.Font.SciFi
+mSum.FontSize = Enum.FontSize.Size24
+mSum.Text = "Name"
+mSum.TextColor3 = Color3.new(1, 0.607843, 0)
+mSum.TextSize = 20
+mSum.TextWrapped = true
+
+sCheck.Name = "sCheck"
+sCheck.Parent = Main
+sCheck.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+sCheck.BorderColor3 = Color3.new(0, 0.607843, 1)
+sCheck.BorderSizePixel = 5
+sCheck.Position = UDim2.new(0.5, 0, 0.36500001, 0)
+sCheck.Size = UDim2.new(0.5, 0, 0.100000001, 0)
+sCheck.ZIndex = 3
+sCheck.Font = Enum.Font.SciFi
+sCheck.FontSize = Enum.FontSize.Size24
+sCheck.Text = "Sheriff [G]"
+sCheck.TextColor3 = Color3.new(0, 1, 1)
+sCheck.TextSize = 20
+sCheck.TextWrapped = true
+
+sSum.Name = "sSum"
+sSum.Parent = Main
+sSum.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+sSum.BorderColor3 = Color3.new(0, 0.607843, 1)
+sSum.BorderSizePixel = 5
+sSum.Position = UDim2.new(0.5, 0, 0.485000014, 0)
+sSum.Size = UDim2.new(0.5, 0, 0.100000001, 0)
+sSum.ZIndex = 3
+sSum.Font = Enum.Font.SciFi
+sSum.FontSize = Enum.FontSize.Size24
+sSum.Text = "Name"
+sSum.TextColor3 = Color3.new(0, 1, 0.607843)
+sSum.TextSize = 20
+sSum.TextWrapped = true
+
+Hide.Name = "Hide"
+Hide.Parent = Main
+Hide.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Hide.BorderColor3 = Color3.new(0, 0.607843, 1)
+Hide.BorderSizePixel = 5
+Hide.Position = UDim2.new(0, 0, 0.925000012, 0)
+Hide.Size = UDim2.new(1, 0, 0.075000003, 0)
+Hide.ZIndex = 3
+Hide.Font = Enum.Font.SourceSans
+Hide.FontSize = Enum.FontSize.Size24
+Hide.Text = "Hide [X]"
+Hide.TextColor3 = Color3.new(0.470588, 0.333333, 1)
+Hide.TextScaled = true
+Hide.TextSize = 20
+Hide.TextWrapped = true
+
+Shift.Name = "Shift"
+Shift.Parent = Main
+Shift.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Shift.BorderColor3 = Color3.new(0, 0.607843, 1)
+Shift.BorderSizePixel = 5
+Shift.Position = UDim2.new(0, 0, 0.600000024, 0)
+Shift.Size = UDim2.new(0.699999988, 0, 0.0850000009, 0)
+Shift.ZIndex = 4
+Shift.Font = Enum.Font.SciFi
+Shift.FontSize = Enum.FontSize.Size24
+Shift.Text = "Run [Shift]"
+Shift.TextColor3 = Color3.new(1, 1, 0)
+Shift.TextSize = 20
+Shift.TextWrapped = true
+
+Coin.Name = "Coin"
+Coin.Parent = Main
+Coin.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Coin.BorderColor3 = Color3.new(0, 0.607843, 1)
+Coin.BorderSizePixel = 5
+Coin.Position = UDim2.new(0, 0, 0.215000004, 0)
+Coin.Size = UDim2.new(0.699999988, 0, 0.125, 0)
+Coin.ZIndex = 4
+Coin.Font = Enum.Font.SciFi
+Coin.FontSize = Enum.FontSize.Size24
+Coin.Text = "Coin Grabber [C]"
+Coin.TextColor3 = Color3.new(0, 0.333333, 1)
+Coin.TextSize = 20
+Coin.TextWrapped = true
+
+isOn1.Name = "isOn1"
+isOn1.Parent = Main
+isOn1.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+isOn1.BorderColor3 = Color3.new(0, 0.607843, 1)
+isOn1.BorderSizePixel = 5
+isOn1.Position = UDim2.new(0.720000029, 0, 0.215000004, 0)
+isOn1.Size = UDim2.new(0.280000001, 0, 0.125, 0)
+isOn1.ZIndex = 5
+isOn1.Font = Enum.Font.SciFi
+isOn1.FontSize = Enum.FontSize.Size18
+isOn1.Text = "Inactive"
+isOn1.TextColor3 = Color3.new(1, 0, 1)
+isOn1.TextSize = 18
+isOn1.TextStrokeColor3 = Color3.new(1, 0, 1)
+isOn1.TextStrokeTransparency = 0.69999998807907
+isOn1.TextWrapped = true
+
+KeyBind.Name = "KeyBind"
+KeyBind.Parent = Main
+KeyBind.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+KeyBind.BorderColor3 = Color3.new(0, 0.607843, 1)
+KeyBind.BorderSizePixel = 5
+KeyBind.Position = UDim2.new(0, 0, 0.814999998, 0)
+KeyBind.Size = UDim2.new(0.699999988, 0, 0.0850000009, 0)
+KeyBind.ZIndex = 3
+KeyBind.Font = Enum.Font.SciFi
+KeyBind.FontSize = Enum.FontSize.Size18
+KeyBind.Text = "Key Binds [CTRL]"
+KeyBind.TextColor3 = Color3.new(1, 1, 1)
+KeyBind.TextSize = 15
+KeyBind.TextWrapped = true
+
+isOn3.Name = "isOn3"
+isOn3.Parent = Main
+isOn3.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+isOn3.BorderColor3 = Color3.new(0, 0.607843, 1)
+isOn3.BorderSizePixel = 5
+isOn3.Position = UDim2.new(0.714999974, 0, 0.704999983, 0)
+isOn3.Size = UDim2.new(0.280000001, 0, 0.0850000009, 0)
+isOn3.ZIndex = 5
+isOn3.Font = Enum.Font.SciFi
+isOn3.FontSize = Enum.FontSize.Size18
+isOn3.Text = "Inactive"
+isOn3.TextColor3 = Color3.new(1, 0, 1)
+isOn3.TextSize = 18
+isOn3.TextStrokeColor3 = Color3.new(1, 0, 1)
+isOn3.TextStrokeTransparency = 0.69999998807907
+isOn3.TextWrapped = true
+
+isOn4.Name = "isOn4"
+isOn4.Parent = Main
+isOn4.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+isOn4.BorderColor3 = Color3.new(0, 0.607843, 1)
+isOn4.BorderSizePixel = 5
+isOn4.Position = UDim2.new(0.714999974, 0, 0.814999998, 0)
+isOn4.Size = UDim2.new(0.280000001, 0, 0.0850000009, 0)
+isOn4.ZIndex = 5
+isOn4.Font = Enum.Font.SciFi
+isOn4.FontSize = Enum.FontSize.Size14
+isOn4.Text = "Active"
+isOn4.TextColor3 = Color3.new(0, 1, 0)
+isOn4.TextSize = 14
+isOn4.TextStrokeColor3 = Color3.new(0, 1, 0)
+isOn4.TextStrokeTransparency = 0.69999998807907
+isOn4.TextWrapped = true
+
+God.Name = "God"
+God.Parent = Main
+God.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+God.BorderColor3 = Color3.new(0, 0.607843, 1)
+God.BorderSizePixel = 5
+God.Position = UDim2.new(0, 0, 0.704999983, 0)
+God.Size = UDim2.new(0.699999988, 0, 0.0850000009, 0)
+God.ZIndex = 3
+God.Font = Enum.Font.SciFi
+God.FontSize = Enum.FontSize.Size24
+God.Text = "God Mode [R]"
+God.TextColor3 = Color3.new(0, 1, 0.0313726)
+God.TextSize = 20
+God.TextWrapped = true
+
+Show.Name = "Show"
+Show.Parent = MM2
+Show.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Show.BorderColor3 = Color3.new(0, 0.607843, 1)
+Show.BorderSizePixel = 5
+Show.Position = UDim2.new(0.574999988, 0, 0.85799998, 0)
+Show.Size = UDim2.new(0.300000012, 0, 0.0399999991, 0)
+Show.Font = Enum.Font.SourceSans
+Show.FontSize = Enum.FontSize.Size24
+Show.Text = "Show [X]"
+Show.TextColor3 = Color3.new(0, 0.607843, 1)
+Show.TextScaled = true
+Show.TextSize = 20
+Show.TextWrapped = true
+
+--Variables 
+local uis = game:GetService("UserInputService")
+local player = game.Players.LocalPlayer
+local mouse = game.Players.LocalPlayer:GetMouse()
+local insidePlayer = game.Players:GetChildren()
+local mouse = game.Players.LocalPlayer:GetMouse()
+local coinActive = false
+local runActive = false
+local godActive = false
+local keyOff = false
+--Hide / Show keybind [X]
+
+Show.MouseButton1Click:connect(function()
+if Main.Visible == false then
+Main.Visible = true
+Show.Visible = false
+end
+
+end)
+
+Hide.MouseButton1Click:connect(function()
+if Main.Visible == true then
+Main.Visible = false
+Show.Visible = true
+end
+
+end)
+
+uis.InputBegan:connect(function(input, gpe)
+if input.KeyCode == Enum.KeyCode.X then
+if Main.Visible == false then
+Main.Visible = true
+Show.Visible = false
+else
+Main.Visible = false
+Show.Visible = true
+end
+end
+end)
+------------------------Turn off keybinds [CTRL]
+
+uis.InputBegan:connect(function(input, gpe)
+if input.KeyCode == Enum.KeyCode.LeftControl then
+if keyOff == false then
+keyOff = true
+isOn4.TextColor3 = Color3.new(255, 0, 255)
+isOn4.TextStrokeColor3 = isOn4.TextColor3
+isOn4.Text = "Inactive"
+else
+keyOff = false
+isOn4.TextColor3 = Color3.new(0, 255, 0)
+isOn4.TextStrokeColor3 = isOn4.TextColor3
+isOn4.Text = "Active"
+end
+end 
+end)
+
+------------------------Find Murderer / Sheriff Function [F and G]
+
+local function getMurderer()
+local allPlayers = game.Players:GetChildren()
+for i,v in pairs(allPlayers) do
+print'Step 1: Murderer'
+if v:FindFirstChild("Backpack") or v:FindFirstChild("Character")then
+print'Step 2: Murderer'
+if v.Backpack:FindFirstChild("Knife") or v.Character:FindFirstChild("Knife") then
+print'Knife has been found'
+local name = v.Name
+print("The Murderer is...", name)
+mSum.Text = name
+mSum.TextColor = v.Character.Torso.BrickColor
+end
+end
+end
+end
+
+local function getSheriff()
+local allPlayers = game.Players:GetChildren()
+for i,v in pairs(allPlayers) do
+print'Step 1: Sheriff'
+if v:FindFirstChild("Backpack") or v:FindFirstChild("Character")then
+print'Step 2: Sheriff'
+if v.Backpack:FindFirstChild("Gun") or v.Character:FindFirstChild("Gun") then
+print'Gun has been found'
+local name = v.Name
+print("The Murderer is...", name)
+sSum.Text = name
+sSum.TextColor = v.Character.Torso.BrickColor
+end
+end
+end
+end
+
+uis.InputBegan:connect(function(input,gpe) 
+if input.KeyCode == Enum.KeyCode.F and keyOff == false then
+print'F has been counted' 
+getMurderer()
+end
+end)
+
+
+uis.InputBegan:connect(function(input,gpe) 
+if input.KeyCode == Enum.KeyCode.G and keyOff == false then
+print'G has been counted'
+getSheriff()
+end
+end)
+
+------------------------Coin Grabber Function [C]
+
+
+mouse.KeyDown:connect(function(key)
+if key == "c" and coinActive == false and keyOff == false then
+coinActive = true
+isOn1.TextColor3 = Color3.new(0, 255, 0)
+isOn1.TextStrokeColor3 = isOn1.TextColor3
+isOn1.Text = "Active"
+
+local children = game.Workspace:GetChildren()
+for _, child in pairs(children) do
+    for _, child in pairs(child:GetChildren()) do
+        table.insert(children, child)
+    end
+
+    if child:IsA("BasePart") and child.Name == "Coin" then
+        child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    end
+end
+end
+end)
+
+
+mouse.KeyUp:connect(function(key)
+if key == "c" and coinActive == true and keyOff == false then
+isOn1.TextColor3 = Color3.new(255, 0, 255)
+isOn1.TextStrokeColor3 = isOn1.TextColor3
+isOn1.Text = "Inactive"
+coinActive = false
+end 
+
+end)
+
+----------------------Shift to run script [Shift]
+
+mouse.KeyDown:connect(function(KeyDown)
+if KeyDown == "0" and runActive == false and keyOff == false then
+runActive = true
+player.Character.Humanoid.WalkSpeed = 32
+
+isOn2.TextColor3 = Color3.new(0, 255, 0)
+isOn2.TextStrokeColor3 = isOn2.TextColor3
+isOn2.Text = "Active"
+end
+end)
+
+mouse.KeyUp:connect(function(KeyUp)
+if KeyUp == "0" and runActive == true and keyOff == false then
+runActive = false
+player.Character.Humanoid.WalkSpeed = 16
+
+isOn2.TextColor3 = Color3.new(255, 0, 255)
+isOn2.TextStrokeColor3 = isOn2.TextColor3
+isOn2.Text = "Inactive"
+end
+end)
+
+----------------------God mode function [R]
+uis.InputBegan:connect(function(input, gpe)
+if input.KeyCode == Enum.KeyCode.R and player.Character and godActive == false and keyOff == false then
+if player.Character:FindFirstChild("Humanoid") then
+godActive = true
+player.Character.Humanoid.Name = "1"
+end
+isOn3.TextColor3 = Color3.new(0, 255, 0)
+isOn3.TextStrokeColor3 = isOn3.TextColor3
+isOn3.Text = "Active"
+
+local l = player.Character["1"]:Clone()
+l.Parent = player.Character
+l.Name = "Humanoid"; wait(0.1)
+player.Character["1"]:Destroy()
+workspace.CurrentCamera.CameraSubject = player.Character.Humanoid
+player.Character.Animate.Disabled = true; wait(0.1)
+player.Character.Animate.Disabled = false
+
+local Debounce = Instance.new("BoolValue")
+Debounce.Name = "Debounce"
+Debounce.Parent = player.Character
+local findDebounce = player.Character:FindFirstChild('Debounce')
+
+repeat
+player.Character:FindFirstChild('Debounce')
+wait(5)
+until not player.Character:FindFirstChild('Debounce')
+
+isOn3.TextColor3 = Color3.new(255, 0, 255)
+isOn3.TextStrokeColor3 = isOn3.TextColor3
+isOn3.Text = "Inactive"
+godActive = false
+end
+end)
+--[Made by Bubbles on verm]--

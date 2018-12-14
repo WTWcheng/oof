@@ -1,0 +1,11 @@
+local a = 1
+
+while wait (1) do
+    if a <  5 then -- change 5 to as many times you  want to do it ( sometimes it will glitch and not gvie you the points ) 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.IgnoreThese.BlueFlag.CFrame
+        wait(1)
+    
+    a = a + 1    
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.IgnoreThese.RedFlag.CFrame
+    end
+end

@@ -1,0 +1,69 @@
+local Player = game.Players.LocalPlayer;
+local Mouse = Player:GetMouse();
+local MaxRange = 300;
+local Hotkey = Enum.KeyCode.X;
+local UIS = game:GetService'UserInputService';
+local auto = true;
+
+function Shoot()
+	local MyHMR = Player.Character and Player.Character.PrimaryPart;
+	local MyData = workspace.PlayerData:FindFirstChild(Player.Name);
+	local IsSameTeam = (MyHMR and MyHMR.Parent:FindFirstChild'CowboyHat' and true) or false;
+	if MyHMR and MyData then
+		for i,v in pairs(game.Players:GetPlayers()) do
+			local HMR = v and v.Character and v.Character.PrimaryPart;
+			local Data = workspace.PlayerData:FindFirstChild(v.Name);
+			local Hum = HMR and v.Character:FindFirstChild'Humanoid';
+			local Head = Hum and v.Character:FindFirstChild'Head';
+			
+			if Head and Hum.Health > 0 and not (((HMR.Parent:FindFirstChild'CowboyHat' and true) or false) == IsSameTeam) then
+				local Found = false;
+				for ii,targ in pairs({HMR, Head}) do
+					if not Found then
+						local R = Ray.new(MyHMR.Position, (targ.Position-MyHMR.Position).unit*MaxRange);
+						local P, Pos = workspace:FindPartOnRay(R, Player.Character);
+						local p = Instance.new('Part', Player.Character);
+						p.Anchored = true;
+						p.Material = Enum.Material.Neon;
+						p.CanCollide = false;
+						p.Transparency = .5;
+						local dist = (MyHMR.Position-Pos).magnitude;
+						p.Size = Vector3.new(.1,.1,dist);
+						p.CFrame = CFrame.new(MyHMR.Position, Pos)*CFrame.new(0,0,-dist/2);
+						game:GetService('Debris'):AddItem(p, .1)
+						if P and P:isDescendantOf(HMR.Parent) then
+							Hum.Health = 0;
+							local Info = {};
+							Info.Start = MyHMR.Position;
+							Info.HitPart = targ;
+							Info.HitPosition = targ.Position;
+							game.ReplicatedStorage.Events.GunFired:FireServer(Info);
+							warn('Hit '..v.Name);
+							Found = true;
+							delay(1, function()
+								if Hum and Hum.Parent then
+									Hum.Health = 100
+								end
+							end)
+							p.Color = Color3.new(0,1,0);
+						else
+							p.Color = Color3.new(1,0,0);
+						end
+					end
+				end
+			end
+		end
+	end
+end
+UIS.InputBegan:Connect(function(Key, GPE)
+	if Key.KeyCode == Hotkey then
+		Shoot();
+	end
+end)
+spawn(function()
+	while auto and wait(.1) do
+		print'Shooting..';
+		Shoot();
+	end
+end)
+warn'Loaded!';
